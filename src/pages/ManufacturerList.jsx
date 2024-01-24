@@ -200,7 +200,7 @@ const ManufacturerList = () => {
           </div>
           <div class="text-center">
             <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Daownload productlist for {manid}
+              Download productlist for {manid}
             </h1>
             <div class="mt-10 flex items-center justify-center gap-x-6">
               <a onClick={print}
