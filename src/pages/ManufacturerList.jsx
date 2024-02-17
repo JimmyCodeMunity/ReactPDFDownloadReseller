@@ -92,6 +92,7 @@ const ManufacturerList = () => {
       "PartNumber",
       "Price",
       "Ex.Rate($)",
+      "Availability",
     ];
     var rows = [];
 
@@ -109,6 +110,7 @@ const ManufacturerList = () => {
         json[i].partNumber,
         json[i].discountPrice,
         json[i].shop.exchangeRate,
+        json[i].shop.availability,
       ];
       rows.push(temp);
     }
