@@ -26,7 +26,7 @@ const CategoryList = () => {
     setLoading(true);
     try {
       const response = await axios.get(
-        `https://opasso-app-backend.vercel.app/api/product/productlistcategory/${categoryname}`
+        `https://res-server-sigma.vercel.app/api/product/productlistcategory/${categoryName}`
       );
       const apidata = response.data;
       setJson(apidata);
@@ -90,7 +90,6 @@ const CategoryList = () => {
   const print = () => {
     const pdf = new jsPDF("p", "pt", "a4");
     const columns = [
-      "Reseller",
       "Productname",
       "PartNumber",
       "Price",
@@ -107,9 +106,9 @@ const CategoryList = () => {
           rows.push(temp);
         }*/
       var temp = [
-        json[i].shop.name,
+        
         json[i].name,
-        json[i].partNumber,
+        json[i].sku,
         json[i].discountPrice,
         json[i].shop.exchangeRate,
       ];
