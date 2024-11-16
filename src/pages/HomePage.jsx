@@ -228,7 +228,7 @@ const HomePage = () => {
           <ZoomPopover />
           <ZoomInButton />
         </div>
-        <Viewer fileUrl={url} plugins={[zoomPluginInstance]} />
+        {/* <Viewer fileUrl={url} plugins={[zoomPluginInstance]} /> */}
       </Worker>
         
       </div>
