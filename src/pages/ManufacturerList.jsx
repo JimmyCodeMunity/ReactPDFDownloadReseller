@@ -23,7 +23,8 @@ const ManufacturerList = () => {
     setLoading(true);
     try {
       const response = await axios.get(
-        `https://opasso-app-backend.vercel.app/api/product/productlist/${manid}`
+        `https://res-server-sigma.vercel.app/api/product/productlist/${manid}`
+        
       );
       const apidata = response.data;
       setJson(apidata);
