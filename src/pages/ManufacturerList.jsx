@@ -31,7 +31,7 @@ const ManufacturerList = () => {
       );
       const apiData = response.data;
       setJson(apiData);
-      console.log("Supplier products", apiData);
+      // console.log("Supplier products", apiData);
       setLoading(false);
     } catch (error) {
       console.error("Error fetching products:", error);
@@ -46,7 +46,7 @@ const ManufacturerList = () => {
         `https://res-server-sigma.vercel.app/api/shop/usersdata/${manid}`
       );
       const userdata = response.data;
-      console.log("User data:", userdata);
+      // console.log("User data:", userdata);
       setLoading(false);
       setSuppliername(userdata?.user?.companyName || "Unknown Supplier");
     } catch (error) {
@@ -83,7 +83,7 @@ const ManufacturerList = () => {
     ]);
 
     // Add a title to the PDF
-    pdf.text(235, 40, `ResellerSprint - ${suppliername} Product List`);
+    pdf.text(100, 40, `ResellerSprint - ${suppliername} Product List`);
     pdf.autoTable(columns, rows, {
       startY: 65,
       theme: "grid",
@@ -131,7 +131,11 @@ const ManufacturerList = () => {
           aria-label="Global"
         >
           <div class="flex lg:flex-1">
-            <a href="#" class="-m-1.5 p-1.5">
+            <a 
+             href="https://resellersprint.com" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+            class="-m-1.5 p-1.5">
               <span class="text-slate-3xl">ResellerSprint</span>
               
             </a>
@@ -144,7 +148,12 @@ const ManufacturerList = () => {
             </a>
           </div>
           <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">
+            <a 
+            href="https://resellersprint.com/supplier-login"
+             
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="text-sm font-semibold leading-6 text-gray-900">
               Log in <span aria-hidden="true">&rarr;</span>
             </a>
           </div>
@@ -167,7 +176,11 @@ const ManufacturerList = () => {
           <div class="hidden sm:mb-8 sm:flex sm:justify-center">
             <div class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
               Announcing our Products{" "}
-              <a href="resellersprint.com" class="font-semibold text-orange-600">
+              <a 
+               href="https://resellersprint.com" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+              class="font-semibold text-orange-600">
                 <span class="absolute inset-0" aria-hidden="true"></span>Read
                 more <span aria-hidden="true">&rarr;</span>
               </a>
